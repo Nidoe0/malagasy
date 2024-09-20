@@ -1,0 +1,593 @@
+/* Reset et styles de base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pcolor-red: #10451db2;
+    --pcolor-vert: #10451d;
+    --pcolor-blanc: #ffffff;
+    --pcolor-gray: #e2dede;
+    --pcolor-black: #000000;
+    --pcolor-jaune: #e8871e;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px;
+    background-color: #312115;
+    color: #fff;
+}
+
+/* Style du logo */
+.logo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.logo img{
+    width: 60px;
+    height: 60px;
+    margin-left:50px;
+    border-radius: 30px;
+}
+.logo h1{
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Style de la barre de navigation */
+nav ul {
+    list-style: none;
+    grid-gap: 20px;
+    padding: 0px 100px;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+/* Style des liens avec animation hover */
+nav ul li a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #a05b00;
+    transition: width 0.3s ease;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+/* Style de la section avec l'image et le texte */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 114px 0;
+    background-color: #0000009b;
+    color: #fff;
+    font-family: 'Arial', sans-serif;
+    grid-gap: 100px;
+}
+.hero-back{
+    background-image: url(../IMG/OIP\ \(1\).jfif);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.hero-text {
+    font-size: 55px;
+    animation: fadeInText 1.5s ease-in-out;
+    text-align: center;
+
+}
+
+.hero-image {
+    max-width: 40%;
+    margin-left: 50px;
+    animation: fadeInImage 1.5s ease-in-out;
+}
+
+/* Animation du texte */
+@keyframes fadeInText {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Animation de l'image */
+@keyframes fadeInImage {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+.deco {
+    height: 100vh;
+    width: 100%;
+    background-color: var(--pcolor-vert);
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.container h1 {
+    text-align: center;
+    color: var(--pcolor-red);
+    font-size: 2.5rem;
+    margin: 50px 0;
+    animation: fadeInUp 2s ease-out;
+}
+
+/* Famaritana */
+.famaritana h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.famaritana-rehetra {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    animation: fadeIn 2s ease-out;
+}
+
+.famaritana-rehetra .gauche,
+.famaritana-rehetra .droite {
+    flex: 1;
+    background-color: var(--pcolor-jaune);
+    padding: 30px;
+    border-radius: 5px;
+    position: relative;
+    animation: slideInLeft 1s ease-out;
+}
+
+.famaritana-rehetra .droite {
+    animation: slideInRight 1s ease-out;
+}
+
+.famaritana-rehetra h3 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--pcolor-blanc);
+}
+
+.famaritana-rehetra p {
+    color: var(--pcolor-blanc);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* Rond */
+.rond {
+    width: 40px;
+    height: 40px;
+    background-color: var(--pcolor-vert);
+    border-radius: 50%;
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* Toetra */
+.toetra {
+    margin: 50px 0;
+}
+
+.toetra h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.tous-toetra {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.toetra1 {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.toe1 {
+    position: relative;
+    background-color: var(--pcolor-gray);
+    padding: 20px;
+    border-radius: 5px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.toe1 h4 {
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    color: var(--pcolor-black);
+}
+
+.toe1 p {
+    color: var(--pcolor-black);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.toetra2 {
+    flex: 1;
+    position: relative;
+    animation: fadeInRight 2s ease-out;
+}
+
+.toetra2 img {
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    border: 10px solid var(--pcolor-blanc);
+    border-radius: 5px;
+    animation: zoomIn 2s ease-out;
+}
+
+.rect {
+    width: 100%;
+    height: 100%;
+    background-color: var(--pcolor-black);
+    opacity: 0.1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+/* Accordion */
+.accordion {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    animation: fadeIn 1.5s ease-out;
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--pcolor-red);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    color: var(--pcolor-blanc);
+    transition: background-color 0.3s;
+}
+
+.accordion-header:hover {
+    background-color: darken(var(--pcolor-red), 10%);
+    color: #272727;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background-color: #fff;
+    border-top: 1px solid #ccc;
+    animation: fadeIn 1s ease-out;
+}
+
+.accordion-content h3 {
+    color: var(--pcolor-vert);
+    margin-bottom: 10px;
+}
+
+.accordion-content p {
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* Anjara */
+.anjara {
+    margin: 50px 0;
+}
+
+.anjara h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.karazany {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--pcolor-gray);
+    border-radius: 5px;
+    animation: slideInUp 1.5s ease-out;
+}
+
+.karazany h3 {
+    margin-bottom: 10px;
+    color: var(--pcolor-black);
+}
+
+.karazany p {
+    color: var(--pcolor-black);
+    line-height: 1.6;
+}
+
+/* Lanjany et Vokany */
+.lanjany, .vokany {
+    margin: 50px 0;
+}
+
+.lanjany h2, .vokany h2 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.lanjany .num {
+    background-color: var(--pcolor-vert);
+    color: var(--pcolor-blanc);
+    padding: 20px;
+    margin: 10px auto;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 4px;
+    max-width: 600px;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+.vokany p {
+    color: var(--pcolor-black);
+    line-height: 1.6;
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    animation: fadeInUp 1.5s ease-out;
+}
+
+/* Download Section */
+.download-section {
+    margin: 50px 0;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+
+.download-section h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.download-section a {
+    display: inline-block;
+    padding: 15px 25px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 800;
+    font-size: 1.2rem;
+    background-color: var(--pcolor-vert);
+    color: var(--pcolor-blanc);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.download-section a:hover {
+    background-color: darken(var(--pcolor-vert), 10%);
+    transform: translateY(-5px);
+    color: #000000;
+}
+
+.download-section i {
+    font-size: 1.5rem;
+    margin-left: 10px;
+}
+
+/* Scroll To Top Button */
+#scrollToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: var(--pcolor-red);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollToTopBtn:hover {
+    background-color: darken(var(--pcolor-red), 20%);
+    transform: scale(1.1);
+    color: rgb(0, 0, 0);
+}
+
+#scrollToTopBtn i {
+    font-size: 20px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideInLeft {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInUp {
+    from { opacity: 0; transform: translateY(50px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+/* Media Queries pour la Responsivité */
+@media (max-width: 1200px) {
+    .container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 992px) {
+    .famaritana-rehetra {
+        flex-direction: column;
+    }
+
+    .famaritana-rehetra .gauche,
+    .famaritana-rehetra .droite {
+        width: 100%;
+        margin: 0;
+    }
+
+    .tous-toetra {
+        flex-direction: column;
+    }
+
+    .toetra2 img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .toetra2 .rect {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .container h1 {
+        font-size: 2rem;
+    }
+
+    .famaritana h2,
+    .toetra h2,
+    .anjara h2,
+    .lanjany h2,
+    .vokany h2 {
+        font-size: 1.5rem;
+    }
+
+    .famaritana-rehetra .gauche,
+    .famaritana-rehetra .droite {
+        padding: 20px;
+    }
+
+    .toe1 h4 {
+        font-size: 1.2rem;
+    }
+
+    .download-section a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .famaritana-rehetra .gauche,
+    .famaritana-rehetra .droite {
+        padding: 15px;
+    }
+
+    .toetra1 {
+        width: 100%;
+    }
+
+    .download-section a {
+        padding: 10px 20px;
+        font-size: 1rem;
+    }
+
+    #scrollToTopBtn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px;
+    }
+}

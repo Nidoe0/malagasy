@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ny tontolo velona</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="/IMG/logo.png" alt="sary">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/index.html">Fandraisana</a></li>
+                <li><a href="/mombanay/index.html">Mombany</a></li>
+                <li><a href="/fifandraisana/index.html">Fifandraisana</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero-back">
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Ny tontolony velona</h1>
+        </div>
+
+    </section>
+    </section>
+    <div class="container">
+        <h1>NY VELONA</h1>
+        <div class="famaritana">
+            <h2>I- FAMARITANA</h2>
+    
+            <div class="famaritana-rehetra" style="width: 50%; padding: 20px; background: #009207; color: white; font-size: 1.1rem; border-radius: 3px;">
+                Ny tontolo ny velona dia ny tontolo hita maso. Izany hoe ny olombelona
+                iany no mirihary eny. <br> <br>
+                Ny antsoina hoe olombelona dia olona manana aina na hoe fofon’aina. Ny
+                olona dia ny vatana fa ny olombelona kosa dia ilay olona velona.
+            </div>
+        </div>
+
+        <div class="rafitra"></div>
+
+            <h2>Ny rafitra mandrafitra ny olombelona</h2>
+        
+            <div class="accordion">
+                
+                <div class="accordion-item">
+                    <button class="accordion-header">Ny tany</button>
+                    <div class="accordion-content">
+                        <p>Ny tany dia ilay hirehareavana, hivelomana, mamelona sy mamono. Ny
+                            ambonin’ny tany dia natao ho an’ny velona ary ny ambanin’ny tany kosa
+                            dia an’ny maty.</p>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <button class="accordion-header">Zava-boary</button>
+                    <div class="accordion-content">
+                        <p>Ny velona iany no mirihariha amin’ny zava-boary ary ny tany misy zava-
+                            boary tsy maha velona.</p>
+                    </div>
+                </div>
+            
+                <div class="accordion-item">
+                    <button class="accordion-header">Ny fiaraha-monina</button>
+                    <div class="accordion-content">
+                        <p>Amin’ny Malagasy,ny fiarahamonina dia manan-danja lehibe satria tsy
+                            misy velona miaina irery ary tsy misy olona velona ka milaza fa velona na
+                            dia tsy misy hafa.</p>
+                    </div>
+                </div>
+            </div>    
+        </div>
+
+        <div class="fanamarihina" style="margin-left: 10%;">
+            <h2 style="margin-top: 50px;">Fanamarihana</h2>
+            <p style="width: 80%; font-size: 1.2rem; padding: 15px; border-radius: 3px; background: #e2dede;">
+                Ny velona dia tsy afa miala amin’ny zava-boary ary tsisy olona milaza tsy
+                mila ny hafa zany ny eo amin’ny fiainana. Ny tontolon’ny velona dia ny ety
+                am-bonin’ny tany ary ny fanahy dia manana fahefana amin’y velona.
+            </p>
+        </div>
+
+        <div style="margin-block: 50px; margin-left: 10%;" class="download">
+            <h1 style="margin-bottom: 50px; text-align: center;">Télécharger la leçon complet en PDF</h1>
+            <a href="velona.pdf" download="velona.pdf" target="_blank">Télécharger la leçon complet <i class='bx bx-download'></i></a>
+        </div>
+
+    </div>
+    <button class="scroll-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
+
+    <script>
+        document.querySelectorAll('.accordion-header').forEach(button => {
+            button.addEventListener('click', () => {
+                const accordionContent = button.nextElementSibling;
+
+                if (accordionContent.style.display === 'block') {
+                    accordionContent.style.display = 'none';
+                } else {
+                    accordionContent.style.display = 'block';
+                }
+            });
+        });
+
+    </script>
+</body>
+</html>
