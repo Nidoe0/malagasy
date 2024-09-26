@@ -776,7 +776,8 @@ gap: 20px;
    cursor: pointer;
 }
 .Contact-right img{
-    width: 400px;
+    width: 500px;
+    border-radius: 2px 50px 1px 50px;
 }
 @media (max-width:800px) {
     .Contact-inputs{

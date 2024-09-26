@@ -94,6 +94,7 @@ nav ul li a:hover::after {
     max-width: 40%;
     margin-left: 50px;
     animation: fadeInImage 1.5s ease-in-out;
+    
 }
 
 /* Animation du texte */
@@ -123,7 +124,7 @@ nav ul li a:hover::after {
 /* Style de l'image */
 .hero-image img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 50px 5px 50px 1px;
 }
 .contents {
     padding: 50px;
